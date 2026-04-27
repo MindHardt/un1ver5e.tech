@@ -3,8 +3,8 @@ import type {GetStaticPathsResult} from "astro";
 import {type CollectionEntry, getCollection, render} from "astro:content";
 import { Image } from 'astro:assets';
 import MainLayout from "@/layouts/MainLayout.astro";
-import { ExternalLink } from "@lucide/astro";
 import Back from "@/components/Back.astro";
+import ExternalLink from "@/components/ExternalLink.astro";
 
 export const getStaticPaths = async () : Promise<GetStaticPathsResult> => {
     return (await getCollection('techs')).flatMap(tech => tech.data.tags
