@@ -6,6 +6,6 @@ about: "https://dotnet.microsoft.com/ru-ru/apps/aspnet/web-apps/blazor"
 tags: ["backend", "frontend"]
 ---
 
-Фреймворк для написание фронтенда на языке C# (почти) без использования Javascript.
+Фреймворк для написания фронтенда на языке C# (почти) без использования Javascript.
 Активно используется в веб-приложениях которые я писал до 2024 года
     
