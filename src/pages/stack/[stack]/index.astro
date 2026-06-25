@@ -47,7 +47,7 @@ const texts : Record<TechTag, { title: string; description: string }> = {
 <MainLayout>
     <Back />
     <Heading level={1}>{texts[stack].title}</Heading>
-    <p class="whitespace-pre-line">{texts[stack].description}</p>
+    <p class="px-2">{texts[stack].description}</p>
     <Heading level={2}>Технологии</Heading>
     <div class="grid gap-2 grid-cols-2 md:grid-cols-3">
         {techs.map(x => <Card image={x.data.image} name={x.data.name} link={`/stack/${stack}/${x.id}`} />)}
