@@ -2,65 +2,77 @@
 import "@fontsource/open-sans/500.css";
 import "../styles/global.css";
 
-import {getImage, Image} from 'astro:assets';
+import { getImage, Image } from "astro:assets";
 import background from "@/content/images/background.jpg";
 import openSansWoff from "@fontsource/open-sans/files/open-sans-cyrillic-500-normal.woff?url";
 import keywords from "@/content/keywords.json";
 import YandexMetrica from "@/components/YandexMetrica.astro";
 import me from "@/content/images/me.jpg";
 interface Props {
-	title?: string;
-	description?: string;
-	image?: ImageMetadata;
+  title?: string;
+  description?: string;
+  image?: ImageMetadata;
 }
 
 let { title, description, image } = Astro.props;
-title ??= 'Игорь Un1ver5e Бабин';
-description ??= 'Личный сайт-визитка Игоря Un1ver5e Бабина';
+title ??= "Игорь Un1ver5e Бабин";
+description ??= "Личный сайт-визитка Игоря Un1ver5e Бабина";
 image ??= me;
 const metaImage = await getImage({ src: image, width: 1024, height: 1024 });
-const metaTags : { name: string, content: string }[] = [
-	{name: 'description', content: description},
-	{name: 'keywords', content: keywords.join(',')},
-	{name: 'twitter:title', content: title},
-	{name: 'twitter:description', content: description},
-	{name: 'twitter:creator', content: '@un1ver5e'},
-	{name: 'twitter:site', content: '@un1ver5e'},
-	{name: 'og:type', content: 'website'},
-	{name: 'og:site_name', content: 'Un1ver5e.Tech'},
-	{name: 'og:logo', content: '/favicon.jpg'},
-	{name: 'og:title', content: title},
-	{name: 'og:description', content: description},
-	{name: 'og:url', content: Astro.url.href},
-	{name: 'twitter:image', content: metaImage.src},
-	{name: 'twitter:card', content: 'summary_large_image'},
-	{name: 'og:image', content: metaImage.src},
-	{name: 'og:image:alt', content: title}
-]
+const metaTags: { name: string; content: string }[] = [
+  { name: "description", content: description },
+  { name: "keywords", content: keywords.join(",") },
+  { name: "twitter:title", content: title },
+  { name: "twitter:description", content: description },
+  { name: "twitter:creator", content: "@un1ver5e" },
+  { name: "twitter:site", content: "@un1ver5e" },
+  { name: "og:type", content: "website" },
+  { name: "og:site_name", content: "Un1ver5e.Tech" },
+  { name: "og:logo", content: "/favicon.jpg" },
+  { name: "og:title", content: title },
+  { name: "og:description", content: description },
+  { name: "og:url", content: Astro.url.href },
+  { name: "twitter:image", content: metaImage.src },
+  { name: "twitter:card", content: "summary_large_image" },
+  { name: "og:image", content: metaImage.src },
+  { name: "og:image:alt", content: title },
+];
 ---
 
 <!doctype html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<link rel="icon" type="image/jpeg" href="/favicon.jpg" />
-		<link rel="preload" as="font" href={openSansWoff} type="font/woff2" crossorigin="anonymous" />
-		<YandexMetrica />
-		<meta name="generator" content={Astro.generator} />
-		{metaTags.map(mt => <meta name={mt.name} content={mt.content} />)}
-		<title>{title}</title>
-	</head>
-	<body class="flex flex-col relative">
-		<main class="mx-auto flex flex-col items-center gap-3 p-5 pb-40 text-center max-w-2xl min-h-dvh z-10 bg-background">
-			<slot />
-		</main>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+    <link
+      rel="preload"
+      as="font"
+      href={openSansWoff}
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <YandexMetrica />
+    <meta name="generator" content={Astro.generator} />
+    {metaTags.map((mt) => <meta name={mt.name} content={mt.content} />)}
+    <title>{title}</title>
+  </head>
+  <body class="flex flex-col relative">
+    <main
+      class="mx-auto flex flex-col items-center gap-3 p-5 pb-40 text-center max-w-2xl min-h-dvh z-10 bg-background"
+    >
+      <slot />
+    </main>
+  </body>
 </html>
 <style>
-	body {
-		background: #b6e7fc;
-		background: linear-gradient(135deg, rgba(182, 231, 252, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 219, 194, 1) 100%);
-	}
+  body {
+    background: rgba(206, 246, 254, 1);
+    background: linear-gradient(
+      135deg,
+      rgba(206, 246, 254, 1),
+      rgba(235, 205, 255, 1)
+    );
+  }
 </style>
