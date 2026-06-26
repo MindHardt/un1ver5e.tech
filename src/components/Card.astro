@@ -14,7 +14,7 @@ const { name, image, link, newTab, width, height } = Astro.props;
 const [target, rel] = newTab ? ['_blank', 'noopener'] : [];
 ---
 
-<a target={target} rel={rel} href={link} class="elevated flex flex-col gap-1 items-center justify-end p-2 text-foreground h-full">
+<a target={target} rel={rel} href={link} aria-label={name} class="elevated flex flex-col gap-1 items-center justify-end p-2 text-foreground h-full">
     <Image src={image} alt='' width={width ?? 256} height={height ?? 256} class="rounded-md w-full my-auto" />
     <Heading level={3}>{name}</Heading>
 </a>
