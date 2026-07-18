@@ -1,5 +1,6 @@
 ---
 name: "ASP.NET Core"
+aliases: [".NET"]
 order: 1
 image: "../images/aspnet.png"
 about: "https://dotnet.microsoft.com/ru-ru/apps/aspnet"

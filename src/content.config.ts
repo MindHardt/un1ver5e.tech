@@ -11,6 +11,7 @@ const techs = defineCollection({
     loader: glob({ pattern: '*.md', base: './src/content/techs' }),
     schema: ({ image }) => z.object({
         name: z.string(),
+        aliases: z.array(z.string()).default([]),
         order: z.number().int(),
         image: image(),
         about: z.string().url(),

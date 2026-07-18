@@ -1,5 +1,6 @@
 ---
 name: "Gitea"
+aliases: ["Git"]
 order: 29
 image: "../images/gitea.png"
 about: "https://about.gitea.com/"
