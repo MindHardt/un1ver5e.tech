@@ -2,6 +2,7 @@
 import {getCollection} from "astro:content";
 import Card from "@/components/Card.astro";
 import Heading from "./Heading.astro";
+import Anchor from "./Anchor.astro";
 const projects = (await getCollection('projects'))
     .sort((l, r) => l.data.from.valueOf() - r.data.from.valueOf())
 
@@ -9,7 +10,9 @@ const projects = (await getCollection('projects'))
 
 
 <section>
-    <Heading level={2}>Проекты</Heading>
+    <Anchor id="projects">
+        <Heading level={2}>Проекты</Heading>
+    </Anchor>
     <div class="flex flex-row gap-2 flex-wrap justify-center">
         {projects.map(p =>
                 <div class="w-[calc(50%-0.5rem)]">

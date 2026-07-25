@@ -1,0 +1,15 @@
+---
+import { Hash } from '@lucide/astro';
+
+interface Props {
+    id: string
+}
+const { id } = Astro.props;
+
+---
+
+<a id={id} href={'#' + id} class="no-underline text-foreground relative group flex flex-row items-center gap-1">
+    <slot />
+    <Hash class="absolute -right-4 opacity-0 group-hover:opacity-50 transition-opacity size-4" />
+</a>
+
