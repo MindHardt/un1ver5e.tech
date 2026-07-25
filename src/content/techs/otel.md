@@ -1,5 +1,6 @@
 ---
 name: "OpenTelemetry"
+aliases: [Otel]
 order: 34
 image: "../images/otel.png"
 about: "https://opentelemetry.io/docs/languages/dotnet/"

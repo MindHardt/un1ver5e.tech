@@ -1,5 +1,6 @@
 ---
 name: "Keycloak"
+aliases: ["OpenID", "OIDC", "SSO", "OAuth"]
 order: 28
 image: "../images/keycloak.png"
 about: "https://www.keycloak.org/"
