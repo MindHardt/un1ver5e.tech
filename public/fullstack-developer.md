@@ -4,12 +4,6 @@ _+ Devops_
 
 igorbabin2002@gmail.com · +79514447212 · Москва · [https://un1ver5e.tech](https://un1ver5e.tech) · [un1ver5e](https://t.me/un1ver5e)
 
-## Краткое содержание
-
-Полный цикл - Backend, Frontend, Devops.
-Разработка это моя страсть, в которой я совершенствуюсь каждый день.
-Меня вдохновляет делать хорошие продукты и вдыхать в них жизнь
-
 ## Проекты
 
 ### AutotunePro (04.2023 - ...)
@@ -30,6 +24,10 @@ igorbabin2002@gmail.com · +79514447212 · Москва · [https://un1ver5e.tec
 
 [https://seadox.ru](https://seadox.ru)
 
+### Подробнее о моих проектах:
+
+[https://un1ver5e.tech/#projects](https://un1ver5e.tech/#projects)
+
 ## Образование
 
 ### ЧелГУ — Программная Инженерия (2020-2024)
@@ -48,6 +46,21 @@ igorbabin2002@gmail.com · +79514447212 · Москва · [https://un1ver5e.tec
 
 [https://autotunepro.ru](https://autotunepro.ru)
 
+## Ключевые слова (для AТS)
+
+_.NET, ASP.NET Core, AWSSDK.S3, Astro, Backend, Blazor, Bootstrap, Clickhouse, Developer, Devops, Docker, EFCore, EntityFramework, Frontend, Git, Gitea, Hono, Immediate.Apis, Keycloak, Let's Encrypt, Material UI, Middle, Nginx, NodeJS, OpenAPI, OpenTelemetry, Portainer, PostgreSQL, React, Redis, S3, Senior, Seq, Serilog, ShadCN UI, StackExchange.Redis, Supabase, TailwindCSS, Tanstack Suite, Traefik, TypeScript, Vite, Yandex Cloud, aspnet, awss3, ef, immediateplatform, letsencrypt, mui, node, npgsql, otel, postgres, shadcn, tailwind, tanstack, testcontainers, xUnit, yandexcloud, yjs, zod, Бекенд, Девопс, Миддл, Разработчик, Сеньор, Фронтенд_
+
+## Краткое содержание
+
+Полный цикл - Backend, Frontend, Devops.
+Разработка это моя страсть, в которой я совершенствуюсь каждый день.
+Меня вдохновляет делать хорошие продукты и вдыхать в них жизнь
+
+## Языки
+
+- **Английский** — C1, Advanced
+- **Русский** — Родной
+
 ## Навыки
 
 - **ASP.NET Core**
@@ -56,8 +69,3 @@ igorbabin2002@gmail.com · +79514447212 · Москва · [https://un1ver5e.tec
 - **Docker**
 - **Typescript**
 - **Git**
-
-## Языки
-
-- **Английский** — C1, Advanced
-- **Русский** — Родной
