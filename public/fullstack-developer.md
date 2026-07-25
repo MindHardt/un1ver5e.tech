@@ -38,7 +38,7 @@ igorbabin2002@gmail.com · +79514447212 · Москва · [https://un1ver5e.tec
 
 ### ЮНИТ6 — Junior Backend (03.2023 - 06.2024)
 
-### Eastwind — Junior+ Backend (09.2025 - 12.2025)
+### Eastwind — Junior+ Backend (09.2024 - 12.2024)
 
 ### Техноком — Middle Backend + Mentor (06.2025 - 05.2026)
 
