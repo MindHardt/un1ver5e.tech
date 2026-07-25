@@ -1,6 +1,6 @@
 ---
 name: "Gitea"
-aliases: ["Git"]
+aliases: ["Git", "Github", "GitLab"]
 order: 29
 image: "../images/gitea.png"
 about: "https://about.gitea.com/"
