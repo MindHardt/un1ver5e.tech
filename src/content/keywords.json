@@ -6,5 +6,7 @@
   "Frontend", "Фронтенд",
   "Devops", "Девопс",
   "Agile", "Scrum",
-  "Jira", "Youtrack", "Kanban"
+  "Jira", "Youtrack", "Kanban",
+  "Dependency Injection", "DI", "IoC",
+  "SOLID"
 ]
