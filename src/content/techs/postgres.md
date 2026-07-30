@@ -3,6 +3,7 @@ name: "PostgreSQL"
 order: 27
 image: "../images/postgres.png"
 about: "https://www.postgresql.org/"
+level: 4
 tags: ["devops"]
 ---
     

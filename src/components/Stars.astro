@@ -1,0 +1,20 @@
+---
+import { Star } from "@lucide/astro";
+
+export interface Props {
+  stars: 1 | 2 | 3 | 4 | 5;
+}
+const { stars } = Astro.props;
+---
+
+<div class="flex flex-row">
+  <span class="sr-only">{stars}/5</span>
+  {
+    [1, 2, 3, 4, 5].map((i) => (
+      <Star
+        stroke="opaque"
+        fill={i > stars ? "var(--color-background)" : "var(--color-sky-300)"}
+      />
+    ))
+  }
+</div>

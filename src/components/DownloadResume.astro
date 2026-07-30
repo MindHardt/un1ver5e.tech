@@ -1,10 +1,13 @@
 ---
 import { FileHeart, FileText } from "@lucide/astro";
 import Heading from "./Heading.astro";
+import Anchor from "./Anchor.astro";
 ---
 
 <section>
-  <Heading level={2}>Скачать резюме</Heading>
+  <Anchor id="resume">
+    <Heading level={2}>Скачать резюме</Heading>
+  </Anchor>
   <div class="grid grid-cols-2 gap-2">
     <a href="/fullstack-developer.pdf" download="Игорь Бабин Резюме.pdf">
       <button id="download-pdf" class="flex flex-row gap-1 items-center elevated p-5 font-bold text-xl shadow-blue-200 text-foreground hover:animate-pulse">

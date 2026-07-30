@@ -5,6 +5,8 @@ import { Image } from 'astro:assets';
 import MainLayout from "@/layouts/MainLayout.astro";
 import Back from "@/components/Back.astro";
 import ExternalLink from "@/components/ExternalLink.astro";
+import Heading from "@/components/Heading.astro";
+import Stars from "@/components/Stars.astro";
 
 export const getStaticPaths = async () : Promise<GetStaticPathsResult> => {
     return (await getCollection('techs')).flatMap(tech => tech.data.tags
@@ -26,7 +28,13 @@ const { Content } = await render(tech);
 <MainLayout title={tech.data.name} image={tech.data.image}>
     <article class="flex flex-col gap-5 items-center">
         <Back href=`/stack/${stack}` />
-        <h1 class="font-extrabold text-2xl">{tech.data.name}</h1>
+        <Heading level={1}>{tech.data.name}</Heading>
+        {tech.data.level && (
+            <div class="flex flex-row gap-1 items-center">
+                <span class="text-lg font-semibold">Уровень владения:</span>
+                <Stars stars={tech.data.level} />
+            </div>
+        )}
         <Content />
         <ExternalLink href={tech.data.about} />
         <Image src={tech.data.image} alt='' width={320} height={320} class="rounded max-w-xs" />
