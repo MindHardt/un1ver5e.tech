@@ -16,8 +16,8 @@ const techs = (await getCollection("techs"))
   <div class="grid grid-cols-2 gap-y-2 gap-x-3">
     {
       techs.map((x) => (
-        <a href={`/stack/${x.data.tags[0]!}/${x.id}`} class="elevated grid grid-cols-2 gap-1 py-2 px-4 items-center">
-          <span class="text-end font-semibold text-lg border-e border-double pe-1 text-foreground">{x.data.name}</span>
+        <a href={`/stack/${x.data.tags[0]!}/${x.id}`} class="elevated grid grud-cols-1 sm:grid-cols-2 gap-1 py-2 px-4 items-center">
+          <span class="sm:text-end font-semibold text-lg sm:border-e border-double pe-1 text-foreground">{x.data.name}</span>
           <Stars stars={x.data.level!} />
         </a>
       ))
