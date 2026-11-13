@@ -29,7 +29,8 @@ const projects = defineCollection({
         from: z.coerce.date(),
         to: z.coerce.date().optional(),
         role: z.string(),
-        url: z.string().url().optional()
+        url: z.string().url().optional(),
+        viewable: z.boolean().default(true)
     })
 })
 

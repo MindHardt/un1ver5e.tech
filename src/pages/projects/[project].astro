@@ -1,44 +1,59 @@
 ---
-import type {GetStaticPaths} from "astro";
-import {type CollectionEntry, getCollection, render} from "astro:content";
+import type { GetStaticPaths } from "astro";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 import MainLayout from "@/layouts/MainLayout.astro";
 import Heading from "@/components/Heading.astro";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import Back from "@/components/Back.astro";
 import ExternalLink from "@/components/ExternalLink.astro";
+import { X } from "@lucide/astro";
 
-export const getStaticPaths : GetStaticPaths = async () => {
-    return (await getCollection('projects')).map(project => ({
-        params: { project: project.id }, props: { project }
-    }))
-}
-const { project } = Astro.props as { project: CollectionEntry<'projects'> }
+export const getStaticPaths: GetStaticPaths = async () => {
+  return (await getCollection("projects")).map((project) => ({
+    params: { project: project.id },
+    props: { project },
+  }));
+};
+const { project } = Astro.props as { project: CollectionEntry<"projects"> };
 const { Content } = await render(project);
 const toShortDate = (date: Date) =>
-    (date.getMonth() + 1).toString().padStart(2, '0') + '.' + date.getFullYear();
-
+  (date.getMonth() + 1).toString().padStart(2, "0") + "." + date.getFullYear();
 ---
 
 <MainLayout title={project.data.title} image={project.data.image}>
-    <div class="flex flex-col items-center gap-4">
-        <Back />
-        <Heading level={1}>{project.data.title}</Heading>
-        <div class="flex flex-row gap-1 items-center">
-            <span class="font-semibold">Компания:</span>
-            <span class="text-lg">{project.data.company}</span>
-        </div>
-        <div class="flex flex-row gap-1 items-center">
-            <span class="font-semibold">Роль:</span>
-            <span class="text-lg">{project.data.role}</span>
-        </div>
-        <div class="flex flex-row gap-1 items-center">
-            <span class="font-semibold">Время работы:</span>
-            <span class="text-lg">{toShortDate(project.data.from)}</span>
-            -
-            <span class="text-lg">{project.data.to ? toShortDate(project.data.to) : 'Настоящий момент'}</span>
-        </div>
-        {project.data.url && <ExternalLink href={project.data.url} label='Ссылка' />}
-        <Content />
-        <Image src={project.data.image} alt='' width={768} height={384} />
+  <div class="flex flex-col items-center gap-4">
+    <Back />
+    <Heading level={1}>{project.data.title}</Heading>
+    <div class="flex flex-row gap-1 items-center">
+      <span class="font-semibold">Компания:</span>
+      <span class="text-lg">{project.data.company}</span>
     </div>
+    <div class="flex flex-row gap-1 items-center">
+      <span class="font-semibold">Роль:</span>
+      <span class="text-lg">{project.data.role}</span>
+    </div>
+    <div class="flex flex-row gap-1 items-center">
+      <span class="font-semibold">Время работы:</span>
+      <span class="text-lg">{toShortDate(project.data.from)}</span>
+      -
+      <span class="text-lg"
+        >{
+          project.data.to ? toShortDate(project.data.to) : "Настоящий момент"
+        }</span
+      >
+    </div>
+    {
+      project.data.url &&
+        (project.data.viewable ? (
+          <ExternalLink href={project.data.url} label="Ссылка" />
+        ) : (
+          <span class="flex flex-row items-center gap-1 text-red-300">
+            <X />
+            Временно недоступно
+          </span>
+        ))
+    }
+    <Content />
+    <Image src={project.data.image} alt="" width={768} height={384} />
+  </div>
 </MainLayout>

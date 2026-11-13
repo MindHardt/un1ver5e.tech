@@ -5,6 +5,7 @@ role: 'Автор идеи, Главный разработчик, DevOps'
 image: '../images/seadox.png'
 from: '2025-06-18'
 url: 'https://seadox.ru'
+viewable: false
 ---
 
 Идея Seadox возникла после блокировки Notion в РФ. Мне захотелось создать свой редактор текстовых

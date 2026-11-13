@@ -2,7 +2,7 @@
 title: 'Un1ver5e.tech'
 company: 'Self-employed'
 role: 'Автор идеи, Главный разработчик'
-image: '../images/un1ver5etech.png'
+image: '../images/un1ver5e-tech.png'
 from: '2026-01-27'
 url: 'https://un1ver5e.tech'
 ---

@@ -5,6 +5,7 @@ role: 'Автор идеи, Главный разработчик'
 image: '../images/un1ver5e-ru.png'
 from: '2024-04-27'
 url: 'https://un1ver5e.ru'
+viewable: false
 ---
 
 Мой первый фуллстек-проект, сайт написаный на [Blazor](/stack/frontend/blazor) WebAssembly + SSR и [Bootstrap](/stack/frontend/bootstrap). 
